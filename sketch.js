@@ -36,12 +36,14 @@ function setup() {
 
   let runButton;
   runButton = createButton("run");
-  runButton.position(0, 527);
+  runButton.position(runButton.width + 10, 0, 'relative');
   runButton.mousePressed(() => gameButton(runButton));
+  runButton.parent('buttons')
   let clearButton;
   clearButton = createButton("clear");
-  clearButton.position(width - clearButton.width, 527);
+  clearButton.position(width + runButton.width + 10, 0, 'relative');
   clearButton.mousePressed(() => clearGame());
+  clearButton.parent('buttons')
 }
 
 function draw() {

@@ -4,7 +4,9 @@ body {
   padding: 0;
 }
 main {
-    justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 canvas {
   display: block;
