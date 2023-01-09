@@ -36,7 +36,7 @@ function setup() {
 
   let button;
   button = createButton("run");
-  button.position(0, 400);
+  button.position(0, 527);
   button.mousePressed(() => gameButton(button));
 }
 
