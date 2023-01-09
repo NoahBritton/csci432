@@ -34,10 +34,14 @@ function setup() {
     }
   }
 
-  let button;
-  button = createButton("run");
-  button.position(0, 527);
-  button.mousePressed(() => gameButton(button));
+  let runButton;
+  runButton = createButton("run");
+  runButton.position(0, 527);
+  runButton.mousePressed(() => gameButton(runButton));
+  let clearButton;
+  clearButton = createButton("clear");
+  clearButton.position(width - clearButton.width, 527);
+  clearButton.mousePressed(() => clearGame());
 }
 
 function draw() {
@@ -64,6 +68,14 @@ function gameButton(element) {
   inner = element.html();
   inner = inner == "run" ? "stop" : "run";
   element.html(inner);
+}
+
+function clearGame() {
+  for (let i = 0; i < cols; i++) {
+    for (let j = 0; j < rows; j++) {
+      window.drawingBoard[i][j].value = 0;
+    }
+  }
 }
 
 function runGame() {
