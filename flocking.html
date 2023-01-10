@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="utf-8" />
+    <title>Noah's Web App</title>
+  </head>
+  <body>
+    <h1>Noah's flocking algorithm</h1>
+    <h2>Based entirely on <a href="" target="_blank">this video</a></h2>
+    <h3>
+      i dont understand this stuff enough to change it in any meaningful way
+    </h3>
+    <main></main>
+    <div id="sliders">
+      <p>
+        Alignment: causes a particular agent to line up with agents close by
+      </p>
+      <input
+        type="range"
+        style="display: none; position: absolute; left: 0px; top: 450px"
+      />
+      <p>Cohesion: causes agents to steer towards the "center of mass"</p>
+      <input
+        type="range"
+        style="display: none; position: absolute; left: 0px; top: 470px"
+      />
+      <p>Seperation: causes an agent to steer away from all of its neighbors</p>
+      <input
+        type="range"
+        style="display: none; position: absolute; left: 0px; top: 490px"
+      />
+    </div>
+    <script src="flocking.js"></script>
+    <script src="boid.js"></script>
+  </body>
+</html>
