@@ -116,7 +116,7 @@ function runGame() {
       let neighbors = liveCount(board, i, j);
       if (state == 0 && neighbors == 3) {
         next[i][j] = 1;
-      } else if (state == 1 && (neighbors < 2 || neighbors > 3)) {
+      } else if (state == 1 && (neighbors < 2 || neighbors > 3 || neighbors == 8)) {
         next[i][j] = 0;
       } else {
         next[i][j] = state;
