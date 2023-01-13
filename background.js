@@ -28,7 +28,7 @@ function PenroseLSystem() {
   this.ruleZ = "--YF++++WF[+ZF++++XF]--XF";
 
   //please play around with the following two lines
-  this.startLength = 2000.0;
+  this.startLength = 3000.0;
   this.theta = TWO_PI / random(options); //36 degrees, try TWO_PI / 6.0, ...
   this.reset();
 }
