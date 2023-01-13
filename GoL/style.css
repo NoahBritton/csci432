@@ -8,6 +8,9 @@ main {
   align-items: center;
   justify-content: center;
 }
+#sliders {
+  margin-left: 29.4% !important;
+}
 canvas {
   display: block;
 }

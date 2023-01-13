@@ -12,9 +12,9 @@ function setup() {
     cohesionSlider.style('position', 'relative');
     seperationSlider.style('position', 'relative');
 
-    alignmentSlider.position(0, -85, 'relative');
-    cohesionSlider.position(-133, alignmentSlider.y + 35, 'relative');
-    seperationSlider.position(-266, cohesionSlider.y + 35, 'relative');
+    alignmentSlider.position(0, -95, 'relative');
+    cohesionSlider.position(-129, alignmentSlider.y + 35, 'relative');
+    seperationSlider.position(-258, cohesionSlider.y + 35, 'relative');
 
     alignmentSlider.parent('sliders');
     cohesionSlider.parent('sliders');

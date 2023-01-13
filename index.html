@@ -1,22 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <meta charset="utf-8" />
     <title>Noah's Web App</title>
 
   </head>
+
   <body>
-    <h1>Noah's game of Life</h1>
-    <h2>built using p5.js and based on <a href="https://youtu.be/FWSR_7kZuYg" target="_blank">this tutorial</a> from <a href="https://www.youtube.com/@TheCodingTrain" target="_blank">The Coding Train</a></h2>
-    <main>
-        <div id="buttons"></div>
+
+    <header>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="/" class="navbar-brand d-flex align-items-center">
+            <strong>Noah's csci432 Website</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">My Web Apps</h1>
+          <p class="lead">This is an album of both the apps I create for class as well as any fun personal projects or interesting simulations I come across and feel the need to showcase. Have fun looking around!</p>
+          <p>
+            <a href="" class="btn btn-primary my-2 disabled"><strike>Classwork Apps</strike></a>
+            <a href="" class="btn btn-secondary my-2 disabled"><strike>Other Apps</strike></a>
+          </p>
+        </div>
+      </section>
+      <div class="album py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col col-lg-3">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="https://i.gyazo.com/6048beb977dcca0232f33faa64c97079.gif" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="https://i.gyazo.com/6048beb977dcca0232f33faa64c97079.gif" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">An almost good flocking algorithm that I replicated using a tutorial. It's a good way to waste time staring at pixels.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-dark" href="/flocking/flocking.html" role="button">Visit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-lg-3">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="https://i.gyazo.com/5e340d82f9188cb36c01c9d314c94acc.gif" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="https://i.gyazo.com/5e340d82f9188cb36c01c9d314c94acc.gif" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">This is a fairly simple Game of Life implementation. Check out LifeWiki for cool patterns and more info on the history and rules of the game.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-dark" href="/GoL/GoL.html" role="button">Visit</a>
+                    <a class="btn btn-secondary" href="https://conwaylife.com/wiki/" role="button">LifeWiki</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col-lg-3">
+              <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" data-src="imgs\WFC_thumbnail.gif" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="imgs\WFC_thumbnail.gif" data-holder-rendered="true">
+                <div class="card-body">
+                  <p class="card-text">This is the page for all the versions of a Wave Function Collapse algorithm I recreated. It's my favorite algorithm and you should look into it :D</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a class="btn btn-dark" href="/WFC/WFC_V1.html" role="button">Visit</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <p class="float-right">
+            <a href="#">Back to top</a>
+          </p>
+          <p>Refresh the page for a randomized seed on the background!</p>
+        </div>
+      </footer>
     </main>
-    <a href="app1/index.html">App 1</a>
-    <a href="flocking.html">Flocking simulation</a>
-    <script src="Gol.js"></script>
-    <script src="pixel.js"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="background.js"></script>
 </html>
