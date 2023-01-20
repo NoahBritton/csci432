@@ -1,15 +1,15 @@
 let t = 0; // time variable
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, 1042);
   canvas.style("z-index", "-1");
   canvas.position(0, 0);
   fill(255, 255, 255);
-    noStroke();
+  noStroke();
 }
 
 function draw() {
-    background(10, 10);
+  background(10, 10);
   // make a x and y grid of ellipses
   for (let x = 0; x <= width; x = x + 30) {
     for (let y = 0; y <= height; y = y + 30) {

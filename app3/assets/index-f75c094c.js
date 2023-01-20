@@ -5001,15 +5001,17 @@ const _export_sfc = (sfc, props) => {
   return target;
 };
 let GolScript = document.createElement("script");
-GolScript.setAttribute("src", "./src/assets/Gol.js");
+GolScript.setAttribute("src", "./assets/Gol.js");
 GolScript.setAttribute("defer", "defer");
+GolScript.setAttribute('type', "application/javascript")
 document.head.appendChild(GolScript);
 let PixelScript = document.createElement("script");
-PixelScript.setAttribute("src", "./src/assets/pixel.js");
+PixelScript.setAttribute("src", "./assets/pixel.js");
 PixelScript.setAttribute("defer", "defer");
+PixelScript.setAttribute('type', "application/javascript")
 document.head.appendChild(PixelScript);
 const _sfc_main$1 = {};
-const _hoisted_1 = /* @__PURE__ */ createBaseVNode("h1", null, "Noah's game of Life", -1);
+const _hoisted_1 = /* @__PURE__ */ createBaseVNode("h1", null, "Noah's Game of Life", -1);
 const _hoisted_2 = /* @__PURE__ */ createBaseVNode("h2", null, [
   /* @__PURE__ */ createTextVNode(" built using p5.js and based on "),
   /* @__PURE__ */ createBaseVNode("a", {

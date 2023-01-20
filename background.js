@@ -1,17 +1,17 @@
 let ds;
 let canvas;
-let options = [3.0, 4.0, 6.0, 10.0];
+let options = [3.0, 6.0, 10.0];
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, 1042);
   canvas.style("z-index", "-1");
   canvas.position(0, 0);
   ds = new PenroseLSystem();
   //please, play around with the following line
-  ds.simulate(5);
+  ds.simulate(random(3, 5));
 }
 
 function draw() {
-  canvas = createCanvas(windowWidth, windowHeight);
+  canvas = createCanvas(windowWidth, 1042);
   background(250);
   ds.render();
 }
@@ -28,7 +28,7 @@ function PenroseLSystem() {
   this.ruleZ = "--YF++++WF[+ZF++++XF]--XF";
 
   //please play around with the following two lines
-  this.startLength = 5000.0;
+  this.startLength = random(5000.0, 6000.0);
   this.theta = TWO_PI / random(options); //36 degrees, try TWO_PI / 6.0, ...
   this.reset();
 }
