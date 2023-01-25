@@ -3,6 +3,16 @@ heading {
   font-size: 50px;
 }
 
+main {
+  margin: 0 auto;
+  padding: 0;
+  width: 70%;
+}
+#app {
+  display: inline-block;
+  margin: 0 auto;
+}
+
 img {
   mix-blend-mode:difference ; 
   margin-right: -5%;
