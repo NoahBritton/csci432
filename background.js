@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  canvas = createCanvas(windowWidth, 1042);
+  createCanvas(windowWidth, 1042);
   background(250);
   ds.render();
 }
