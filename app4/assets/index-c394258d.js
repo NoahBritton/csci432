@@ -5005,7 +5005,7 @@ const _sfc_main$2 = {
   setup(__props) {
     const heading = reactive({
       title: "oah",
-      image: "./assets/image.jpg"
+      image: "app4/assets/image.jpg"
     });
     const size2 = reactive({
       w: 200,
