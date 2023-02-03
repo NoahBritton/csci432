@@ -1,6 +1,18 @@
 
-img[data-v-1672ae53] {
+img[data-v-975cdf3b] {
   height: 75px;
+}
+.btn.btn-primary[data-v-975cdf3b] {
+  background-color: green;
+}
+#form-header[data-v-975cdf3b] {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  background-color: green;
+  border-radius: 15px 15px 0px 0px;
+}
+#address-section[data-v-975cdf3b] {
+  background-color: rgba(0, 0, 0, 0.301);
 }
 :root {
   --vt-c-white: #ffffff;

@@ -155,28 +155,6 @@ function looseEqual(a, b) {
 function looseIndexOf(arr, val) {
   return arr.findIndex((item) => looseEqual(item, val));
 }
-const toDisplayString = (val) => {
-  return isString(val) ? val : val == null ? "" : isArray(val) || isObject(val) && (val.toString === objectToString || !isFunction(val.toString)) ? JSON.stringify(val, replacer, 2) : String(val);
-};
-const replacer = (_key, val) => {
-  if (val && val.__v_isRef) {
-    return replacer(_key, val.value);
-  } else if (isMap(val)) {
-    return {
-      [`Map(${val.size})`]: [...val.entries()].reduce((entries, [key, val2]) => {
-        entries[`${key} =>`] = val2;
-        return entries;
-      }, {})
-    };
-  } else if (isSet(val)) {
-    return {
-      [`Set(${val.size})`]: [...val.values()]
-    };
-  } else if (isObject(val) && !isArray(val) && !isPlainObject(val)) {
-    return String(val);
-  }
-  return val;
-};
 const EMPTY_OBJ = {};
 const EMPTY_ARR = [];
 const NOOP = () => {
@@ -5209,7 +5187,7 @@ function normalizeContainer(container) {
 const _imports_0 = "/app6/orange_shirt.png";
 const _imports_1 = "/app6/purple_shirt.png";
 const _imports_2 = "/app6/lime_shirt.png";
-const Signup_vue_vue_type_style_index_0_scoped_1672ae53_lang = "";
+const Signup_vue_vue_type_style_index_0_scoped_975cdf3b_lang = "";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -5217,13 +5195,15 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _withScopeId = (n) => (pushScopeId("data-v-1672ae53"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-975cdf3b"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "order-form m-4" };
 const _hoisted_2 = { class: "container pt-4" };
 const _hoisted_3 = { class: "row" };
 const _hoisted_4 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12 px-4" }, [
-  /* @__PURE__ */ createBaseVNode("h1", null, "Order Form"),
-  /* @__PURE__ */ createBaseVNode("span", null, "Please fill in your information and we'll be sending your order in no time."),
+  /* @__PURE__ */ createBaseVNode("div", { id: "form-header" }, [
+    /* @__PURE__ */ createBaseVNode("h1", null, "Order Form"),
+    /* @__PURE__ */ createBaseVNode("span", null, "Please fill in your information and we'll be sending your order in no time.")
+  ]),
   /* @__PURE__ */ createBaseVNode("hr", { class: "mt-1" })
 ], -1));
 const _hoisted_5 = { class: "col-12" };
@@ -5233,119 +5213,129 @@ const _hoisted_7 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBase
 ], -1));
 const _hoisted_8 = { class: "col-sm-6" };
 const _hoisted_9 = { class: "form-outline" };
-const _hoisted_10 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "invalid-feedback" }, "Please enter your first name.", -1));
-const _hoisted_11 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
+const _hoisted_10 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
   class: "form-label",
   for: "form1"
 }, "First", -1));
-const _hoisted_12 = { class: "col-sm-6 mt-2 mt-sm-0" };
-const _hoisted_13 = { class: "form-outline" };
-const _hoisted_14 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "invalid-feedback" }, "Please enter your last name.", -1));
-const _hoisted_15 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
+const _hoisted_11 = { class: "col-sm-6 mt-2 mt-sm-0" };
+const _hoisted_12 = { class: "form-outline" };
+const _hoisted_13 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
   class: "form-label",
   for: "form2"
 }, "Last", -1));
-const _hoisted_16 = { class: "row mt-3 mx-4" };
-const _hoisted_17 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
+const _hoisted_14 = { class: "col-12" };
+const _hoisted_15 = { class: "row mx-4" };
+const _hoisted_16 = { class: "col-sm-6 mt-2 mt-sm-0" };
+const _hoisted_17 = { class: "form-outline" };
+const _hoisted_18 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
+  class: "form-label",
+  for: "form3"
+}, "Email", -1));
+const _hoisted_19 = { class: "row mt-3 mx-4" };
+const _hoisted_20 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
   /* @__PURE__ */ createBaseVNode("label", { class: "order-form-label" }, "T-shirt model")
 ], -1));
-const _hoisted_18 = { class: "col-12" };
-const _hoisted_19 = {
+const _hoisted_21 = { class: "col-12" };
+const _hoisted_22 = {
   class: "form-check form-check-inline",
   required: ""
 };
-const _hoisted_20 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
+const _hoisted_23 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
   class: "form-check-label",
   for: "shirtRadio1"
 }, [
   /* @__PURE__ */ createBaseVNode("img", { src: _imports_0 })
 ], -1));
-const _hoisted_21 = { class: "form-check form-check-inline" };
-const _hoisted_22 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
+const _hoisted_24 = { class: "form-check form-check-inline" };
+const _hoisted_25 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
   class: "form-check-label",
   for: "shirtRadio2"
 }, [
   /* @__PURE__ */ createBaseVNode("img", { src: _imports_1 })
 ], -1));
-const _hoisted_23 = { class: "form-check form-check-inline" };
-const _hoisted_24 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
+const _hoisted_26 = { class: "form-check form-check-inline" };
+const _hoisted_27 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
   class: "form-check-label",
   for: "shirtRadio3"
 }, [
   /* @__PURE__ */ createBaseVNode("img", { src: _imports_2 })
 ], -1));
-const _hoisted_25 = { class: "row mt-3 mx-4" };
-const _hoisted_26 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
+const _hoisted_28 = { class: "row mt-3 mx-4" };
+const _hoisted_29 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
   /* @__PURE__ */ createBaseVNode("label", {
     class: "order-form-label",
     for: "inputSize"
   }, "Size")
 ], -1));
-const _hoisted_27 = { class: "col-12" };
-const _hoisted_28 = {
+const _hoisted_30 = { class: "col-12" };
+const _hoisted_31 = {
   class: "form-outline",
   "data-mdb-toggle-button": "false"
 };
-const _hoisted_29 = /* @__PURE__ */ createStaticVNode('<option value="XS" selected data-v-1672ae53>XS</option><option value="S" data-v-1672ae53>S</option><option value="M" data-v-1672ae53>M</option><option value="L" data-v-1672ae53>L</option><option value="XL" data-v-1672ae53>XL</option>', 5);
-const _hoisted_34 = [
-  _hoisted_29
+const _hoisted_32 = /* @__PURE__ */ createStaticVNode('<option value="XS" selected data-v-975cdf3b>XS</option><option value="S" data-v-975cdf3b>S</option><option value="M" data-v-975cdf3b>M</option><option value="L" data-v-975cdf3b>L</option><option value="XL" data-v-975cdf3b>XL</option>', 5);
+const _hoisted_37 = [
+  _hoisted_32
 ];
-const _hoisted_35 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
+const _hoisted_38 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
   /* @__PURE__ */ createBaseVNode("label", {
     for: "",
     class: "order-form-label"
   }, "Quanitity")
 ], -1));
-const _hoisted_36 = { class: "col-12" };
-const _hoisted_37 = { class: "row mt-3 mx-4" };
-const _hoisted_38 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
+const _hoisted_39 = { class: "col-12" };
+const _hoisted_40 = { class: "row mt-3 mx-4" };
+const _hoisted_41 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
   /* @__PURE__ */ createBaseVNode("label", {
     class: "order-form-label",
     for: "date-picker"
   }, "Date")
 ], -1));
-const _hoisted_39 = { class: "col-12" };
-const _hoisted_40 = {
+const _hoisted_42 = { class: "col-12" };
+const _hoisted_43 = {
   class: "form-outline datepicker",
   "data-mdb-toggle-button": "false"
 };
-const _hoisted_41 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
+const _hoisted_44 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
   for: "datepicker",
   class: "form-label"
 }, "Select a date", -1));
-const _hoisted_42 = { class: "row mt-3 mx-4" };
-const _hoisted_43 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
+const _hoisted_45 = {
+  class: "row mt-3 mx-4",
+  id: "address-section"
+};
+const _hoisted_46 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("div", { class: "col-12" }, [
   /* @__PURE__ */ createBaseVNode("label", { class: "order-form-label" }, "Adress")
 ], -1));
-const _hoisted_44 = { class: "col-12" };
-const _hoisted_45 = { class: "form-outline" };
-const _hoisted_46 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
-  class: "form-label",
-  for: "form5"
-}, "Street Address", -1));
-const _hoisted_47 = { class: "col-12 mt-2" };
+const _hoisted_47 = { class: "col-12" };
 const _hoisted_48 = { class: "form-outline" };
 const _hoisted_49 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
   class: "form-label",
-  for: "form6"
-}, "Street Address Line 2", -1));
-const _hoisted_50 = { class: "col-sm-6 mt-2 pe-sm-2" };
+  for: "form5"
+}, "Street Address", -1));
+const _hoisted_50 = { class: "col-12 mt-2" };
 const _hoisted_51 = { class: "form-outline" };
 const _hoisted_52 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
   class: "form-label",
-  for: "form7"
-}, "City", -1));
+  for: "form6"
+}, "Street Address Line 2", -1));
 const _hoisted_53 = { class: "col-sm-6 mt-2 pe-sm-2" };
 const _hoisted_54 = { class: "form-outline" };
 const _hoisted_55 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
   class: "form-label",
+  for: "form7"
+}, "City", -1));
+const _hoisted_56 = { class: "col-sm-6 mt-2 pe-sm-2" };
+const _hoisted_57 = { class: "form-outline" };
+const _hoisted_58 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createBaseVNode("label", {
+  class: "form-label",
   for: "form9"
 }, "Postal / Zip Code", -1));
-const _hoisted_56 = { class: "row mt-3" };
-const _hoisted_57 = { class: "col-12" };
-const _hoisted_58 = { class: "container pt-4" };
-const _hoisted_59 = { class: "row" };
-const _hoisted_60 = { class: "col-12 px-4" };
+const _hoisted_59 = { class: "row mt-3" };
+const _hoisted_60 = {
+  class: "col-12 text-right",
+  style: { "display": "inline-block" }
+};
+const _hoisted_61 = /* @__PURE__ */ createStaticVNode('<form class="order-form m-4" data-v-975cdf3b><div class="container pt-4" data-v-975cdf3b><div class="row" data-v-975cdf3b><div class="col-12 px-4" data-v-975cdf3b><h1 data-v-975cdf3b>Console Output</h1><code class="output" style="white-space:break-spaces;" data-v-975cdf3b></code></div></div></div></form>', 1);
 const _sfc_main$1 = {
   __name: "Signup",
   setup(__props) {
@@ -5354,6 +5344,7 @@ const _sfc_main$1 = {
         first: "",
         last: ""
       },
+      email: "",
       shirt: {
         color: "",
         size: "",
@@ -5390,12 +5381,11 @@ const _sfc_main$1 = {
                       }, null, 512), [
                         [vModelText, order.name.first]
                       ]),
-                      _hoisted_10,
-                      _hoisted_11
+                      _hoisted_10
                     ])
                   ]),
-                  createBaseVNode("div", _hoisted_12, [
-                    createBaseVNode("div", _hoisted_13, [
+                  createBaseVNode("div", _hoisted_11, [
+                    createBaseVNode("div", _hoisted_12, [
                       withDirectives(createBaseVNode("input", {
                         type: "text",
                         id: "form2",
@@ -5405,71 +5395,88 @@ const _sfc_main$1 = {
                       }, null, 512), [
                         [vModelText, order.name.last]
                       ]),
-                      _hoisted_14,
-                      _hoisted_15
+                      _hoisted_13
                     ])
                   ])
                 ]),
-                createBaseVNode("div", _hoisted_16, [
-                  _hoisted_17,
-                  createBaseVNode("div", _hoisted_18, [
-                    createBaseVNode("div", _hoisted_19, [
+                createBaseVNode("div", _hoisted_14, [
+                  createBaseVNode("div", _hoisted_15, [
+                    createBaseVNode("div", _hoisted_16, [
+                      createBaseVNode("div", _hoisted_17, [
+                        withDirectives(createBaseVNode("input", {
+                          type: "text",
+                          id: "form3",
+                          class: "form-control order-form-input",
+                          "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => order.email = $event),
+                          required: ""
+                        }, null, 512), [
+                          [vModelText, order.email]
+                        ]),
+                        _hoisted_18
+                      ])
+                    ])
+                  ])
+                ]),
+                createBaseVNode("div", _hoisted_19, [
+                  _hoisted_20,
+                  createBaseVNode("div", _hoisted_21, [
+                    createBaseVNode("div", _hoisted_22, [
                       withDirectives(createBaseVNode("input", {
                         class: "form-check-input",
                         name: "shirtRadios",
                         type: "radio",
                         id: "shirtRadio1",
                         value: "orange",
-                        "onUpdate:modelValue": _cache[2] || (_cache[2] = ($event) => order.shirt.color = $event)
+                        "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => order.shirt.color = $event)
                       }, null, 512), [
                         [vModelRadio, order.shirt.color]
                       ]),
-                      _hoisted_20
+                      _hoisted_23
                     ]),
-                    createBaseVNode("div", _hoisted_21, [
+                    createBaseVNode("div", _hoisted_24, [
                       withDirectives(createBaseVNode("input", {
                         name: "shirtRadios",
                         class: "form-check-input",
                         type: "radio",
                         id: "shirtRadio2",
                         value: "purple",
-                        "onUpdate:modelValue": _cache[3] || (_cache[3] = ($event) => order.shirt.color = $event)
+                        "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => order.shirt.color = $event)
                       }, null, 512), [
                         [vModelRadio, order.shirt.color]
                       ]),
-                      _hoisted_22
+                      _hoisted_25
                     ]),
-                    createBaseVNode("div", _hoisted_23, [
+                    createBaseVNode("div", _hoisted_26, [
                       withDirectives(createBaseVNode("input", {
                         name: "shirtRadios",
                         class: "form-check-input",
                         type: "radio",
                         id: "shirtRadio3",
                         value: "lime",
-                        "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => order.shirt.color = $event)
+                        "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => order.shirt.color = $event)
                       }, null, 512), [
                         [vModelRadio, order.shirt.color]
                       ]),
-                      _hoisted_24
+                      _hoisted_27
                     ])
                   ])
                 ]),
-                createBaseVNode("div", _hoisted_25, [
-                  _hoisted_26,
-                  createBaseVNode("div", _hoisted_27, [
-                    createBaseVNode("div", _hoisted_28, [
+                createBaseVNode("div", _hoisted_28, [
+                  _hoisted_29,
+                  createBaseVNode("div", _hoisted_30, [
+                    createBaseVNode("div", _hoisted_31, [
                       withDirectives(createBaseVNode("select", {
                         id: "inputSize",
                         class: "form-control",
-                        "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => order.shirt.size = $event),
+                        "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => order.shirt.size = $event),
                         required: ""
-                      }, _hoisted_34, 512), [
+                      }, _hoisted_37, 512), [
                         [vModelSelect, order.shirt.size]
                       ])
                     ])
                   ]),
-                  _hoisted_35,
-                  createBaseVNode("div", _hoisted_36, [
+                  _hoisted_38,
+                  createBaseVNode("div", _hoisted_39, [
                     withDirectives(createBaseVNode("input", {
                       id: "number-picker",
                       class: "form-control",
@@ -5477,56 +5484,43 @@ const _sfc_main$1 = {
                       name: "num",
                       min: "1",
                       max: "100",
-                      "onUpdate:modelValue": _cache[6] || (_cache[6] = ($event) => order.shirt.quantity = $event),
+                      "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => order.shirt.quantity = $event),
                       required: ""
                     }, null, 512), [
                       [vModelText, order.shirt.quantity]
                     ])
                   ])
                 ]),
-                createBaseVNode("div", _hoisted_37, [
-                  _hoisted_38,
-                  createBaseVNode("div", _hoisted_39, [
-                    createBaseVNode("div", _hoisted_40, [
+                createBaseVNode("div", _hoisted_40, [
+                  _hoisted_41,
+                  createBaseVNode("div", _hoisted_42, [
+                    createBaseVNode("div", _hoisted_43, [
                       withDirectives(createBaseVNode("input", {
                         type: "date",
                         class: "form-control order-form-input",
                         id: "datepicker",
                         "data-mdb-toggle": "datepicker",
-                        "onUpdate:modelValue": _cache[7] || (_cache[7] = ($event) => order.date = $event),
+                        "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => order.date = $event),
                         required: ""
                       }, null, 512), [
                         [vModelText, order.date]
                       ]),
-                      _hoisted_41
+                      _hoisted_44
                     ])
                   ])
                 ]),
-                createBaseVNode("div", _hoisted_42, [
-                  _hoisted_43,
-                  createBaseVNode("div", _hoisted_44, [
-                    createBaseVNode("div", _hoisted_45, [
-                      withDirectives(createBaseVNode("input", {
-                        type: "text",
-                        id: "form5",
-                        class: "form-control order-form-input",
-                        "onUpdate:modelValue": _cache[8] || (_cache[8] = ($event) => order.address.street = $event),
-                        required: ""
-                      }, null, 512), [
-                        [vModelText, order.address.street]
-                      ]),
-                      _hoisted_46
-                    ])
-                  ]),
+                createBaseVNode("div", _hoisted_45, [
+                  _hoisted_46,
                   createBaseVNode("div", _hoisted_47, [
                     createBaseVNode("div", _hoisted_48, [
                       withDirectives(createBaseVNode("input", {
                         type: "text",
-                        id: "form6",
+                        id: "form5",
                         class: "form-control order-form-input",
-                        "onUpdate:modelValue": _cache[9] || (_cache[9] = ($event) => order.address.street2 = $event)
+                        "onUpdate:modelValue": _cache[9] || (_cache[9] = ($event) => order.address.street = $event),
+                        required: ""
                       }, null, 512), [
-                        [vModelText, order.address.street2]
+                        [vModelText, order.address.street]
                       ]),
                       _hoisted_49
                     ])
@@ -5535,12 +5529,11 @@ const _sfc_main$1 = {
                     createBaseVNode("div", _hoisted_51, [
                       withDirectives(createBaseVNode("input", {
                         type: "text",
-                        id: "form7",
+                        id: "form6",
                         class: "form-control order-form-input",
-                        "onUpdate:modelValue": _cache[10] || (_cache[10] = ($event) => order.address.city = $event),
-                        required: ""
+                        "onUpdate:modelValue": _cache[10] || (_cache[10] = ($event) => order.address.street2 = $event)
                       }, null, 512), [
-                        [vModelText, order.address.city]
+                        [vModelText, order.address.street2]
                       ]),
                       _hoisted_52
                     ])
@@ -5549,43 +5542,50 @@ const _sfc_main$1 = {
                     createBaseVNode("div", _hoisted_54, [
                       withDirectives(createBaseVNode("input", {
                         type: "text",
+                        id: "form7",
+                        class: "form-control order-form-input",
+                        "onUpdate:modelValue": _cache[11] || (_cache[11] = ($event) => order.address.city = $event),
+                        required: ""
+                      }, null, 512), [
+                        [vModelText, order.address.city]
+                      ]),
+                      _hoisted_55
+                    ])
+                  ]),
+                  createBaseVNode("div", _hoisted_56, [
+                    createBaseVNode("div", _hoisted_57, [
+                      withDirectives(createBaseVNode("input", {
+                        type: "text",
                         id: "form9",
                         class: "form-control order-form-input",
-                        "onUpdate:modelValue": _cache[11] || (_cache[11] = ($event) => order.address.zip = $event),
+                        "onUpdate:modelValue": _cache[12] || (_cache[12] = ($event) => order.address.zip = $event),
                         required: ""
                       }, null, 512), [
                         [vModelText, order.address.zip]
                       ]),
-                      _hoisted_55
+                      _hoisted_58
                     ])
                   ])
                 ]),
-                createBaseVNode("div", _hoisted_56, [
-                  createBaseVNode("div", _hoisted_57, [
+                createBaseVNode("div", _hoisted_59, [
+                  createBaseVNode("div", _hoisted_60, [
                     createBaseVNode("button", {
-                      class: "btn btn-primary",
+                      class: "btn btn-primary float-end",
                       type: "button",
-                      onClick: _cache[12] || (_cache[12] = ($event) => printData())
-                    }, " Submit ")
+                      onClick: _cache[13] || (_cache[13] = ($event) => printData())
+                    }, " Purchase ")
                   ])
                 ])
               ])
             ])
           ])
         ]),
-        createBaseVNode("div", _hoisted_58, [
-          createBaseVNode("div", _hoisted_59, [
-            createBaseVNode("code", {
-              class: "output",
-              style: "white-space: pre-line"
-            },)
-          ])
-        ])
+        _hoisted_61
       ], 64);
     };
   }
 };
-const Signup = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-1672ae53"]]);
+const Signup = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-975cdf3b"]]);
 const _sfc_main = {
   __name: "App",
   setup(__props) {
