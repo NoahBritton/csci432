@@ -5187,7 +5187,7 @@ function normalizeContainer(container) {
 const _imports_0 = "/app6/orange_shirt.png";
 const _imports_1 = "/app6/purple_shirt.png";
 const _imports_2 = "/app6/lime_shirt.png";
-const Signup_vue_vue_type_style_index_0_scoped_975cdf3b_lang = "";
+const Signup_vue_vue_type_style_index_0_scoped_7c80e80b_lang = "";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -5195,7 +5195,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const _withScopeId = (n) => (pushScopeId("data-v-975cdf3b"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-7c80e80b"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "order-form m-4" };
 const _hoisted_2 = { class: "container pt-4" };
 const _hoisted_3 = { class: "row" };
@@ -5272,7 +5272,7 @@ const _hoisted_31 = {
   class: "form-outline",
   "data-mdb-toggle-button": "false"
 };
-const _hoisted_32 = /* @__PURE__ */ createStaticVNode('<option value="XS" selected data-v-975cdf3b>XS</option><option value="S" data-v-975cdf3b>S</option><option value="M" data-v-975cdf3b>M</option><option value="L" data-v-975cdf3b>L</option><option value="XL" data-v-975cdf3b>XL</option>', 5);
+const _hoisted_32 = /* @__PURE__ */ createStaticVNode('<option value="XS" selected data-v-7c80e80b>XS</option><option value="S" data-v-7c80e80b>S</option><option value="M" data-v-7c80e80b>M</option><option value="L" data-v-7c80e80b>L</option><option value="XL" data-v-7c80e80b>XL</option>', 5);
 const _hoisted_37 = [
   _hoisted_32
 ];
@@ -5335,7 +5335,7 @@ const _hoisted_60 = {
   class: "col-12 text-right",
   style: { "display": "inline-block" }
 };
-const _hoisted_61 = /* @__PURE__ */ createStaticVNode('<form class="order-form m-4" data-v-975cdf3b><div class="container pt-4" data-v-975cdf3b><div class="row" data-v-975cdf3b><div class="col-12 px-4" data-v-975cdf3b><h1 data-v-975cdf3b>Console Output</h1><code class="output" style="white-space:break-spaces;" data-v-975cdf3b></code></div></div></div></form>', 1);
+const _hoisted_61 = /* @__PURE__ */ createStaticVNode('<form class="order-form m-4" data-v-7c80e80b><div class="container pt-4" data-v-7c80e80b><div class="row" data-v-7c80e80b><div class="col-12 px-4" data-v-7c80e80b><h1 data-v-7c80e80b>Console Output</h1><code class="output" style="white-space:break-spaces;" data-v-7c80e80b></code></div></div></div></form>', 1);
 const _sfc_main$1 = {
   __name: "Signup",
   setup(__props) {
@@ -5359,7 +5359,11 @@ const _sfc_main$1 = {
       }
     });
     function printData() {
-      console.log(JSON.parse(JSON.stringify(order)));
+      if (order.name.first == "" || order.name.last == "" || order.email == "" || order.shirt.color == "" || order.shirt.size == "" || order.shirt.quantity == "" || order.date == "" || order.address.street == "" || order.address.city == "" || order.address.zip == "") {
+        console.log("please fill in missing information");
+      } else {
+        console.log(JSON.parse(JSON.stringify(order)));
+      }
     }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock(Fragment, null, [
@@ -5585,7 +5589,7 @@ const _sfc_main$1 = {
     };
   }
 };
-const Signup = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-975cdf3b"]]);
+const Signup = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-7c80e80b"]]);
 const _sfc_main = {
   __name: "App",
   setup(__props) {
