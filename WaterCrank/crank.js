@@ -1,4 +1,4 @@
-var dragging = false;
+var turning = false;
 var empty = true;
 var full = false;
 
@@ -11,7 +11,7 @@ var x2 = x;
 var y2 = y + r;
 
 // Knob angle
-var angle = 0;
+var angle = 0.1;
 var preAngle = 0;
 var dx = 0;
 var dy = 0;
@@ -28,7 +28,7 @@ function setup() {
 function draw() {
   background(255);
 
-  if (dragging) {
+  if (turning) {
     updateKnob();
     dx = mouseX - x;
     dy = mouseY - y;
@@ -37,7 +37,7 @@ function draw() {
     angle = mouseAngle - offsetAngle;
   }
 
-  // Draw crank
+  /* Draw crank */
   fill(255);
   push();
   translate(x, y);
@@ -45,7 +45,7 @@ function draw() {
   pop();
   fill(0);
   ellipse(x2, y2, kr, kr); // knob
-  // Draw water tank
+  /* Draw water tank */
   fill(255);
   rectMode(CORNERS);
   strokeWeight(0);
@@ -59,15 +59,14 @@ function draw() {
 
   var status = full ? "Full!" : "";
   if (!full) {status = empty ? "Empty!" : "";}
-
-  if (angle < preAngle) { //400
+  if (angle < preAngle) {
     if (!((wl + 0.5) > 400)) {
         wl += 0.5;
         empty = false;
     } else {
         empty = true;
     }
-  } else if (angle > preAngle) { //200
+  } else if (angle > preAngle) {
     if (!((wl - 0.5) < 200)) {
         wl -= 0.5;
         full = false;
@@ -87,27 +86,29 @@ function updateKnob() {
     var dx1 = mouseX - x;
     var dy1 = mouseY - y;
     // dist : euclidean distance, length of the vecotr
-    var distnc = Math.sqrt(dx1 * dx1 + dy1 * dy1);
-    // (ux, uy): unit vector form 'posA' in direction to 'posB', with length 1
-    var ux = dx1 / distnc;
-    var uy = dy1 / distnc;
+    var dist = Math.sqrt(dx1 * dx1 + dy1 * dy1);
+    // (ux, uy): unit vector from 'posA' in direction to 'posB', with length 1
+    var ux = dx1 / dist;
+    var uy = dy1 / dist;
     // (x2, y2): point with a distance of r from "posA" and the vector to "posB"
     x2 = x + ux * r;
     y2 = y + uy * r;
 }
 
 function mousePressed() {
-  // Did I click on knob?
   if (dist(mouseX, mouseY, x2, y2) < kr) {
-    dragging = true;
-    // If so, start to keep track of relative location of mouseXY to corner of canvas
+    turning = true;
+    /* Start to keep track of relative location of mouseXY to corner of canvas */
     var dx = mouseX - x;
     var dy = mouseY - y;
+    /* atan2(y, x) returns the inverse tangent of a coordinate in radians, in more understandable terms, 
+       it is used to get the angle between the positive x-axis (top of canvas since the coordinate plane is flipped)
+       and the ray from the orgin (corner of canvas) to the point (cursor position) */
     offsetAngle = atan2(dy, dx) - angle;
   }
 }
 
 function mouseReleased() {
   // Stop dragging
-  dragging = false;
+  turning = false;
 }
