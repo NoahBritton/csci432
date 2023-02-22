@@ -5297,7 +5297,7 @@ const data = [
       {
         title: "Amethyst",
         duration: "3:25",
-        link: "assets/audio/Amethyst/Amethyst.mp3"
+        link: "app9/assets/audio/Amethyst/Amethyst.mp3"
       }
     ]
   },
@@ -5311,7 +5311,7 @@ const data = [
         appleMusic: "https://music.apple.com/us/album/haven/1592119820",
         youtube: "https://youtube.com/playlist?list=OLAK5uy_k2mVRM9gBBom2qOBZlG-Jyjx5O9R3aErc"
       },
-      art: "assets/album_art/Haven.jpg"
+      art: "app9/assets/album_art/Haven.jpg"
     },
     artist: {
       name: "Clearpine",
@@ -5325,42 +5325,42 @@ const data = [
       {
         title: "Elapse",
         duration: "3:25",
-        link: "assets/audio/Haven/Elapse.mp3"
+        link: "app9/assets/audio/Haven/Elapse.mp3"
       },
       {
         title: "Honeyhive",
         duration: "3:32",
-        link: "assets/audio/Haven/Honeyhive.mp3"
+        link: "app9/assets/audio/Haven/Honeyhive.mp3"
       },
       {
         title: "Ennui",
         duration: "3:39",
-        link: "assets/audio/Haven/Ennui.mp3"
+        link: "app9/assets/audio/Haven/Ennui.mp3"
       },
       {
         title: "Open Door",
         duration: "3:33",
-        link: "assets/audio/Haven/Open_Door.mp3"
+        link: "app9/assets/audio/Haven/Open_Door.mp3"
       },
       {
         title: "New Leaf",
         duration: "3:28",
-        link: "assets/audio/Haven/New_Leaf.mp3"
+        link: "app9/assets/audio/Haven/New_Leaf.mp3"
       },
       {
         title: "Raven Rock",
         duration: "2:46",
-        link: "assets/audio/Haven/Raven_Rock.mp3"
+        link: "app9/assets/audio/Haven/Raven_Rock.mp3"
       },
       {
         title: "Cloudbreak",
         duration: "3:57",
-        link: "assets/audio/Haven/Cloudbreak.mp3"
+        link: "app9/assets/audio/Haven/Cloudbreak.mp3"
       },
       {
         title: "Dead Roots",
         duration: "4:31",
-        link: "assets/audio/Haven/Dead_Roots.mp3"
+        link: "app9/assets/audio/Haven/Dead_Roots.mp3"
       }
     ]
   },
@@ -5374,7 +5374,7 @@ const data = [
         appleMusic: "https://music.apple.com/us/album/into-the-tree-single/1598979905",
         youtube: "https://youtube.com/playlist?list=OLAK5uy_kkacVgjCwL5Ys71fDfNpQ4qNhn11k5wt0"
       },
-      art: "assets/album_art/Into_the_tree.jpg"
+      art: "app9/assets/album_art/Into_the_tree.jpg"
     },
     artist: {
       name: "Clearpine",
@@ -5388,17 +5388,17 @@ const data = [
       {
         title: "One Last Dance",
         duration: "4:15",
-        link: "assets/audio/Into_the_Tree/One_Last_Dance.mp3"
+        link: "app9/assets/audio/Into_the_Tree/One_Last_Dance.mp3"
       },
       {
         title: "Float",
         duration: "3:54",
-        link: "assets/audio/Into_the_Tree/Float.mp3"
+        link: "app9/assets/audio/Into_the_Tree/Float.mp3"
       },
       {
         title: "DreamScape",
         duration: "2:27",
-        link: "assets/audio/Into_the_Tree/DreamScape.mp3"
+        link: "app9/assets/audio/Into_the_Tree/DreamScape.mp3"
       }
     ]
   }
