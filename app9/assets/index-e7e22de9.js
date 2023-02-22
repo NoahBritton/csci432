@@ -5374,7 +5374,7 @@ const data = [
         appleMusic: "https://music.apple.com/us/album/into-the-tree-single/1598979905",
         youtube: "https://youtube.com/playlist?list=OLAK5uy_kkacVgjCwL5Ys71fDfNpQ4qNhn11k5wt0"
       },
-      art: "app9/assets/album_art/Into_the_tree.jpg"
+      art: "app9/assets/album_art/Into_the_Tree.jpg"
     },
     artist: {
       name: "Clearpine",
@@ -5398,7 +5398,7 @@ const data = [
       {
         title: "DreamScape",
         duration: "2:27",
-        link: "app9/assets/audio/Into_the_Tree/DreamScape.mp3"
+        link: "app9/assets/audio/Into_the_Tree/Dreamscape.mp3"
       }
     ]
   }
