@@ -5283,7 +5283,7 @@ const data = [
         appleMusic: "https://music.apple.com/us/album/amethyst-single/1637340513",
         youtube: "https://youtube.com/playlist?list=OLAK5uy_lpiQcN1FSNU1xmS73dWtDmnUiB3YXBdzc"
       },
-      art: "assets/album_art/Amethyst.jpg"
+      art: "app9/assets/album_art/Amethyst.jpg"
     },
     artist: {
       name: "Clearpine",
